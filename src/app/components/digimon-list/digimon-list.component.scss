@@ -1,0 +1,17 @@
+table {
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+div.selected {
+    border: 2px solid green;
+    //background-color: #359cbf;
+}
+
+div {
+    border: 2px solid white;
+}

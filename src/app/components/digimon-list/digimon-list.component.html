@@ -1,0 +1,14 @@
+<h1> DIGIMONS LIST</h1>
+
+<mat-grid-list cols="3" rowHeight="400px">
+  <mat-grid-tile
+      *ngFor="let digimon of digimons"
+      [colspan]="'1'"
+      [rowspan]="'1'"
+      [style.background]="'white'">
+      <div [ngClass]="{'selected': digimon.selected}">
+        <img src={{digimon.img}} alt={{digimon.name}} (click)="selectedDigimon(digimon)">
+        {{ digimon.name }}
+      </div>
+  </mat-grid-tile>
+</mat-grid-list>

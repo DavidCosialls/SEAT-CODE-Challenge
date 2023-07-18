@@ -1,0 +1,17 @@
+
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item>Item 1</button>
+            <button mat-menu-item>Item 2</button>
+          </mat-menu>
+        <span>SEAT:CODE Technical assigment (David Cosialls)</span>
+        <img class="imageResize" src="https://media.licdn.com/dms/image/C560BAQGqAvFDCtM-LQ/company-logo_200_200/0/1649240207438?e=2147483647&v=beta&t=xaCZFfyReTxj4TyP-xSw8RynqqmSL3kttB5rYj4HQ_I">
+    </mat-toolbar-row>
+    <mat-toolbar-row >
+        <span [style]="'margin-left: 10px'">Set your own Digimon Team</span>
+    </mat-toolbar-row>
+</mat-toolbar>
