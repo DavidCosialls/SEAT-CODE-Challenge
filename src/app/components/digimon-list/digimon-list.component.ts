@@ -13,7 +13,9 @@ import { DigimonStore } from 'src/app/state/store';
 })
 export class DigimonListComponent implements OnInit{
   digimons: DigimonModel[] = []
+  digimonsBackup: DigimonModel[] = []
   digimonsLength: number[] = []
+  searchText = ""
 
   loading = false
 
@@ -32,7 +34,8 @@ export class DigimonListComponent implements OnInit{
     })
     this.digimonQuery.getDigimons().subscribe(digimons => {
       console.log("DIGIMON SUBSCRIPTION", digimons)
-      this.digimons = digimons
+      this.digimons = [...digimons]; 
+      this.digimonsBackup = [...digimons]; 
     })
     this.digimonQuery.getIsLoading().pipe(
       take(1),
@@ -73,8 +76,19 @@ export class DigimonListComponent implements OnInit{
         } 
       })
     }
-    
-  
+  }
+
+  filterByName(name: string): void {
+    const digimons = this.digimonsBackup.filter((digimon) => digimon.name.includes(name))
+    if (digimons.length > 0){
+      this.digimons = digimons
+    }else{
+      if (name == ""){
+        this.digimons = this.digimonsBackup
+      }else{
+        console.log("not found")
+      }
+    }
   }
 
   

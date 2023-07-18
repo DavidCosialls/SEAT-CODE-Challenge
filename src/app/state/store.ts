@@ -54,4 +54,29 @@ export class DigimonStore extends Store<DigimonState> {
             })
         })
     }
+
+    setNewNickname(digimon: DigimonModel, nickName: string): Promise<boolean>{
+        const digimonCopy = Object.assign({}, digimon); 
+        digimonCopy.name = nickName
+        return new Promise<boolean>((resolve) => {
+            this.apiRequest.updateDigimons(digimonCopy).subscribe(() => {
+                this.update(state => {
+                    const digimons = [...state.digimonList]
+                    let index = state.digimonList.findIndex((digimonIndex) => digimonIndex.id == digimon.id)
+                    if (index != -1){
+                        digimons[index] = {
+                            ...digimons[index],
+                            name: nickName
+                        }
+                    }
+                    resolve(true)
+                    return{
+                        digimonList: digimons,
+                        isLoaded: true
+                    };
+                })
+            })
+        })
+    }
+    
 }

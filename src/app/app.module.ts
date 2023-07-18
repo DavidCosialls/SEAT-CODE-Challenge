@@ -16,6 +16,9 @@ import { HomeComponent } from './components/home/home.component'
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { TeamComponent } from './components/team/team.component';
+import { FormsModule } from '@angular/forms';
+import { Ng2SearchPipeModule } from 'ng2-search-filter'
 
 
 
@@ -26,7 +29,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
     AppComponent,
     DigimonListComponent,
     ButtonsControllerComponent,
-    HomeComponent
+    HomeComponent,
+    TeamComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +44,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MatInputModule,
     MatIconModule,
     MatMenuModule,
-    MatGridListModule
+    MatGridListModule,
+    FormsModule
   ],
   providers: [
   ],

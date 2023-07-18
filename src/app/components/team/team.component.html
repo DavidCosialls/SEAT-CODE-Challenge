@@ -1,0 +1,18 @@
+
+<mat-grid-list *ngIf="!digimonsService.noDigimonsInTheTeam" cols="3" rowHeight="400px">
+    <mat-grid-tile *ngFor="let digimon of digimonsService.DigimonsTeam">
+        <img src={{digimon.img}}>
+        <div>
+            <input matInput id="{{digimon.name}}id" type="text" [(ngModel)]="digimon.name" placeholder="{{digimon.name}}">
+            <button mat-button type="submit" (click)="setNickname(digimon.name, digimon)">Set nickname</button>
+            <br/>
+            <button mat-button (click)="deleteDigimon(digimon)">Remove from the team</button>
+        </div>
+    </mat-grid-tile>
+</mat-grid-list>
+
+<div *ngIf="digimonsService.noDigimonsInTheTeam" class = "center">
+    <br>
+    <h1>There are no digimons in the Team go to the digimon list</h1>
+    <button mat-button (click)="navigateToList()">Bring me there!</button>
+</div>

@@ -1,4 +1,16 @@
-<h1> DIGIMONS LIST</h1>
+
+
+<div class="center">
+  <mat-form-field>
+    <mat-label>Search</mat-label>
+    <input matInput name="search" type="text" [(ngModel)]="searchText" placeholder="Digimon Search">
+  </mat-form-field>
+
+  <button mat-button (click)="filterByName(searchText)"> Search </button>
+  <button mat-button (click)="filterByName('')"> Reset Search</button>
+</div>
+
+
 
 <mat-grid-list cols="3" rowHeight="400px">
   <mat-grid-tile
