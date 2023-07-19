@@ -4,7 +4,7 @@
       "name": "Nicknametrymon",
       "img": "https://digimon.shadowsmith.com/img/koromon.jpg",
       "level": "In Training",
-      "selected": true,
+      "selected": false,
       "id": 1
     },
     {
@@ -1124,7 +1124,7 @@
       "name": "Goldramon",
       "img": "https://digimon.shadowsmith.com/img/goldramon.jpg",
       "level": "Mega",
-      "selected": true,
+      "selected": false,
       "id": 161
     },
     {

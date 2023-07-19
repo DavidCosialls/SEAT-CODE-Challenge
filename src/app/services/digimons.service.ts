@@ -26,6 +26,9 @@ export class DigimonsService {
         let index = this.DigimonsTeam.findIndex((digimonInside) => digimonInside.img == digimon.img)
         if (index != -1){
             this.DigimonsTeam.splice(index, 1)
+            if (this.DigimonsTeam.length == 0){
+                this.noDigimonsInTheTeam = true
+            }
         }
     }
 
