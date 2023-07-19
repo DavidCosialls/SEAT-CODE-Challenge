@@ -11,14 +11,14 @@
       "name": "Tsunomon",
       "img": "https://digimon.shadowsmith.com/img/tsunomon.jpg",
       "level": "In Training",
-      "selected": true,
+      "selected": false,
       "id": 2
     },
     {
       "name": "Yokomon",
       "img": "https://digimon.shadowsmith.com/img/yokomon.jpg",
       "level": "In Training",
-      "selected": true,
+      "selected": false,
       "id": 3
     },
     {
